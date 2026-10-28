@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmykkxhuuut0p"]
+
+[ext_resource type="Script" path="res://generated_result.gd" id="1_1ujgb"]
+[ext_resource type="Texture2D" uid="uid://wxugu20f7y3i" path="res://wheel_placeholder.png" id="2_k8cet"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1ujgb")
+wheel_texture = ExtResource("2_k8cet")
+
+[node name="Camera2D" type="Camera2D" parent="."]
