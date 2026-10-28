@@ -1,19 +1,16 @@
 extends Node2D
 
-@export var axl_num: int = 4 
-@export var wheel_texture: Texture2D
+var axl_num: int = 3
 
 func _ready() -> void:
-	_wheel_gen()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
 	pass
 
-func _wheel_gen():
+func _draw():
+	#wheel generation
 	for i in range (0,axl_num):
-		var wheel = Sprite2D.new()
-		add_child(wheel)
-		wheel.set_texture(wheel_texture)
-		wheel.position.x += i*200 - (axl_num - 1) * 100
-		wheel.self_modulate = Color(1, 1, 1, 0.5)
+		var x_pos = i*200 - (axl_num - 1) * 100
+		draw_circle(Vector2(x_pos, 0), 100, Color("FFFFFF"))
+
+func _axl_slider_update(value: int) -> void:
+	axl_num = value
+	queue_redraw()
