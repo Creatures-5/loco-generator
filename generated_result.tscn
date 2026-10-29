@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmykkxhuuut0p"]
+[gd_scene load_steps=2 format=3 uid="uid://dmykkxhuuut0p"]
 
 [ext_resource type="Script" path="res://draw_train.gd" id="1_1ujgb"]
-[ext_resource type="Script" path="res://bogey.gd" id="2_43tuf"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -42,7 +41,6 @@ alignment = 1
 [node name="Bogey1" type="Control" parent="Control/BogeyContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("2_43tuf")
 
 [node name="HSlider" type="HSlider" parent="Control/BogeyContainer/Bogey1"]
 layout_mode = 1
@@ -65,7 +63,6 @@ ticks_on_borders = true
 [node name="Bogey2" type="Control" parent="Control/BogeyContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("2_43tuf")
 
 [node name="HSlider" type="HSlider" parent="Control/BogeyContainer/Bogey2"]
 layout_mode = 1
@@ -84,6 +81,3 @@ value = 3.0
 rounded = true
 tick_count = 7
 ticks_on_borders = true
-
-[connection signal="value_changed" from="Control/BogeyContainer/Bogey1/HSlider" to="Control/BogeyContainer/Bogey1" method="_slider_value_changed"]
-[connection signal="value_changed" from="Control/BogeyContainer/Bogey2/HSlider" to="Control/BogeyContainer/Bogey2" method="_slider_value_changed"]
